@@ -1,7 +1,8 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 
-export const Navbar: React.FunctionComponent = () => {
+// export const Navbar: React.FunctionComponent = () => {
+    export const Navbar: any = () => {
     render(
     <nav>
         <div className="nav-wrapper purple darken-2 px1">
