@@ -1,6 +1,9 @@
 import React, { useRef } from 'react'
 
-export const TodoForm: React.FunctionComponent<{onAdd(title: string): void}> = () => {
+interface TodoFormProps {
+    onAdd(title: String) : void
+}
+export const TodoForm: React.FunctionComponent<TodoFormProps> = (props) => {
     // const [title, setTitle] = useState<string>('')
 
     // const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -10,7 +13,7 @@ export const TodoForm: React.FunctionComponent<{onAdd(title: string): void}> = (
 
     const keyPressHandler = (event: React.KeyboardEvent) => {
       if(event.key === 'Enter') {
-          console.log(ref.current!.value)
+          props.onAdd(ref.current!.value)
           ref.current!.value = ''
       }
     }

@@ -18,3 +18,15 @@ code {
 .mt2 {
   margin-top: 2rem
 }
+.todo label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem;
+  background: #f3f3f3;
+}
+.todo i {
+   z-index: 2;
+}
